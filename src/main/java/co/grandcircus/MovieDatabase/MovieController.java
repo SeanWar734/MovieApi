@@ -49,10 +49,10 @@ public class MovieController {
 		return (list.get(num));
 	}
 
-//	@GetMapping("/movies/categories")
-//	public List<String> categories() {
-//		return dao.findAllGenre();
-//	}
+	@GetMapping("/movies/categories")
+	public List<String> categories() {
+		return dao.findAllGenre();
+	}
 
 	@GetMapping("/movies/name")
 	public List<Movie> withName(@RequestParam("name") String name) {

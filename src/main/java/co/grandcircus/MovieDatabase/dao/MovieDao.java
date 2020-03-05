@@ -12,6 +12,6 @@ public interface MovieDao extends JpaRepository<Movie, Long>{
 	List<Movie> findByNameContainingIgnoreCase(String name);
 	List<Movie> findByCategoryIgnoreCase(String category);
 	
-//	@Query("SELECT DISTINCT category FROM movie")
-//	List<String> findAllGenre();
+	@Query("SELECT DISTINCT category FROM Movie")
+	List<String> findAllGenre();
 }
